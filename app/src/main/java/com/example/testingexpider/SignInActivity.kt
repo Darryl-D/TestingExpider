@@ -1,7 +1,12 @@
 package com.example.testingexpider
 
+import android.app.AlarmManager
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import androidx.activity.enableEdgeToEdge
 import android.text.TextUtils
 import android.widget.Button
@@ -75,6 +80,21 @@ class SignInActivity : AppCompatActivity() {
                     }
                 }
         }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            if (!alarmManager.canScheduleExactAlarms()) {
+                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
+                    data = Uri.parse("package:$packageName")
+                }
+                startActivity(intent)
+                return // ❗ Don't continue until user grants permission
+            }
+        }
+        val time = System.currentTimeMillis() + 60_000 // 1 minute later
+        scheduleNotification(this, "Test Title", "This is a test message", time)
+
+
 
         // Set up click listener for the Sign Up TextView
         signUpTextView.setOnClickListener {

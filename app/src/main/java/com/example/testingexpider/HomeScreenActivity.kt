@@ -32,16 +32,16 @@ class HomeScreenActivity : AppCompatActivity() {
         }
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            if (!alarmManager.canScheduleExactAlarms()) {
-                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
-                    data = Uri.parse("package:$packageName")
-                }
-                startActivity(intent)
-                return // ❗ Don't continue until user grants permission
-            }
-        }
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            //val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            //if (!alarmManager.canScheduleExactAlarms()) {
+            //    val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
+              //      data = Uri.parse("package:$packageName")
+                //}
+                //startActivity(intent)
+                //return // Don't continue until user grants permission
+            //}
+        //}
 
         auth = FirebaseAuth.getInstance()
         myFragment(HomeFragment())
@@ -58,9 +58,9 @@ class HomeScreenActivity : AppCompatActivity() {
             myFragment(fragment)
         }
 
-        // ✅ Only run this if exact alarm permission has been granted
-        val time = System.currentTimeMillis() + 60_000 // 1 minute later
-        scheduleNotification(this, "Test Title", "This is a test message", time)
+        // Only run this if exact alarm permission has been granted
+        //val time = System.currentTimeMillis() + 60_000 // 1 minute later
+        //scheduleNotification(this, "Test Title", "This is a test message", time)
     }
 
     private fun myFragment(fragment: Fragment?): Boolean {

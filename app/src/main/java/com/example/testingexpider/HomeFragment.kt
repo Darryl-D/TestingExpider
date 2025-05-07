@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
 import java.util.Calendar
-import com.example.testingexpider.scheduleNotification
 
 class HomeFragment : Fragment() {
 

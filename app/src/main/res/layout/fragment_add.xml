@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/addTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Add" />
+
+    <!-- Item Type -->
+    <Spinner
+        android:id="@+id/foodTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginVertical="250dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Date pick -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="40dp"
+        android:textStyle="bold"
+        android:text="Select Date" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:paddingTop="20dp"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberPickerMonth"/>
+        <NumberPicker
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberPickerDate"/>
+        <NumberPicker
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberPickerYear"/>
+
+    </LinearLayout>
+
+    <!-- Item name -->
+    <EditText
+        android:id="@+id/foodNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter Product Name"
+        android:padding="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:maxLines="1" />
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#F9A825"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Add Item"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</FrameLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveFragment">
+
+    <TextView
+        android:id="@+id/removeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Remove" />
+
+    <!-- Item type -->
+    <Spinner
+        android:id="@+id/foodTypeRemoveSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="140dp"
+        android:layout_gravity="top|center_horizontal" />
+
+    <!-- Item name retrieve -->
+    <Spinner
+        android:id="@+id/itemNameSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="top|center_horizontal" />
+
+    <!-- Button to check -->
+    <Button
+        android:id="@+id/checkDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Remove Item"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="200dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#F9A825" />
+</FrameLayout>

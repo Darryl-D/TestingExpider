@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Home" />
+
+    <!-- Top list -->
+    <HorizontalScrollView
+        android:id="@+id/topItemsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:scrollbars="none"
+
+        android:layout_gravity="top|center">
+
+        <LinearLayout
+            android:id="@+id/topItemsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" />
+    </HorizontalScrollView>
+
+    <!-- "No Items" Text for Top Horizontal Scroll -->
+    <TextView
+        android:id="@+id/topNoItemsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="No Items"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- switch button -->
+    <Button
+        android:id="@+id/btnFoods"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|left"
+        android:backgroundTint="#F9A825"
+        android:text="Foods"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="90dp"/>
+
+    <Button
+        android:id="@+id/btnDrinks"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|right"
+        android:backgroundTint="#F9A825"
+        android:text="Drinks"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="90dp"/>
+
+
+    <!-- Bottom List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="170dp"
+        android:clipToPadding="true"
+        android:layout_gravity="bottom|center"
+        android:background="@android:color/transparent"
+        tools:listitem="@layout/item_list_row"
+        android:padding="16dp"/>
+
+    <!-- "No Items" Text for Bottom RecyclerView -->
+    <TextView
+        android:id="@+id/bottomNoItemsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="520dp"
+        android:gravity="center"
+        android:text="No Items"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</FrameLayout>

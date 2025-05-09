@@ -88,7 +88,7 @@ class SignInActivity : AppCompatActivity() {
                     data = Uri.parse("package:$packageName")
                 }
                 startActivity(intent)
-                return // ❗ Don't continue until user grants permission
+                return
             }
         }
         val time = System.currentTimeMillis() + 60_000 // 1 minute later
@@ -103,7 +103,6 @@ class SignInActivity : AppCompatActivity() {
 
         // You might want to add a click listener for the "Forgot Password" TextView as well
         findViewById<TextView>(R.id.forgetpass).setOnClickListener {
-            // Handle forgot password logic here, e.g., navigate to a reset password activity
             Toast.makeText(this, "Forgot Password clicked", Toast.LENGTH_SHORT).show()
         }
 

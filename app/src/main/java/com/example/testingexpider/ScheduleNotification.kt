@@ -6,7 +6,6 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 
-// Constants (ensure these exist somewhere in your project)
 const val titleExtra = "titleExtra"
 const val messageExtra = "messageExtra"
 

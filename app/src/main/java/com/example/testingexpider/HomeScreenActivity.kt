@@ -1,12 +1,6 @@
 package com.example.testingexpider
 
-import android.app.AlarmManager
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,18 +25,6 @@ class HomeScreenActivity : AppCompatActivity() {
             insets
         }
 
-
-        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            //val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            //if (!alarmManager.canScheduleExactAlarms()) {
-            //    val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
-              //      data = Uri.parse("package:$packageName")
-                //}
-                //startActivity(intent)
-                //return // Don't continue until user grants permission
-            //}
-        //}
-
         auth = FirebaseAuth.getInstance()
         myFragment(HomeFragment())
 
@@ -58,9 +40,6 @@ class HomeScreenActivity : AppCompatActivity() {
             myFragment(fragment)
         }
 
-        // Only run this if exact alarm permission has been granted
-        //val time = System.currentTimeMillis() + 60_000 // 1 minute later
-        //scheduleNotification(this, "Test Title", "This is a test message", time)
     }
 
     private fun myFragment(fragment: Fragment?): Boolean {

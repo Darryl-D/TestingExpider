@@ -68,7 +68,7 @@ class SignInActivity : AppCompatActivity() {
                         val intent = Intent(
                             this,
                             HomeScreenActivity::class.java
-                        ) // Replace HomeActivity with your actual home screen activity
+                        )
                         startActivity(intent)
                         finish() // Close the sign-in activity so the user can't go back without logging out
                     } else {
@@ -101,7 +101,6 @@ class SignInActivity : AppCompatActivity() {
             // Navigate to the sign-up activity
         }
 
-        // You might want to add a click listener for the "Forgot Password" TextView as well
         findViewById<TextView>(R.id.forgetpass).setOnClickListener {
             Toast.makeText(this, "Forgot Password clicked", Toast.LENGTH_SHORT).show()
         }
@@ -120,7 +119,7 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(
                 this,
                 HomeScreenActivity::class.java
-            ) // Replace HomeActivity with your actual home screen activity
+            )
             startActivity(intent)
             finish()
         }
